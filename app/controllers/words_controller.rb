@@ -1,3 +1,3 @@
-class Word < ApplicationController
-  
+class WordsController < ApplicationController
+  def index; end
 end
