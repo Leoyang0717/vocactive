@@ -2,14 +2,14 @@
 
 <%= link_to '新增字卡', new_word_path %>
 
-<div class= 'content' style='display: flex;'>
-  <div style='border: 1px solid black;'>
+<div class= 'content flex'>
+  <div class= 'border border-black'>
     <p>中文</p>
     <% @chinese.each do |chinese| %>
       <span><%= chinese %></span>
     <% end %>
   </div>
-  <div style='border: 1px solid red;'>
+  <div class= 'border border-red-300'>
     <p>韓文</p>
     <% @korean.each do |korean| %>
       <span><%= korean %></span>
