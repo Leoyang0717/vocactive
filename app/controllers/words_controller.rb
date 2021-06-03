@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# This shiny device polishes bared foos
 class WordsController < ApplicationController
   def index
     @word = Word.all
