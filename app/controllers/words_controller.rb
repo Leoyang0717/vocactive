@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# This shiny device polishes bared foos
 class WordsController < ApplicationController
   def index
     @word = Word.all
@@ -11,11 +14,13 @@ class WordsController < ApplicationController
 
   def create
     @word = Word.new(clean_params)
-    @word.save!
-    redirect_to '/words'
+    return redirect_to words_path if @word.save
+
+    render :new
   end
 
   def show
+    
   end
 
   def update
