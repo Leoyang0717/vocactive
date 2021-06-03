@@ -50,6 +50,9 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'factory_bot'
+  gem 'faker', '~> 2.18'
+  gem 'shoulda-matchers'
   gem 'webdrivers'
   gem 'rspec', '~> 3.10'
 end
