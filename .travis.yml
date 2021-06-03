@@ -1,0 +1,18 @@
+
+language: ruby
+dist: trusty
+rvm:
+  - 2.6.6
+
+before_install:
+- gem install bundler
+
+cache:
+  - bundler
+  # - /home/travis/.rvm/
+
+before_script: 
+  - bundle exec rake db:create
+
+script:
+  — bundle exec rspec
