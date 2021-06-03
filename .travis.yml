@@ -1,11 +1,12 @@
 
 language: ruby
+dist: trusty
 rvm:
   - 2.6.6
 
 cache:
   - bundler
-  - /home/travis/.rvm/
+  # - /home/travis/.rvm/
 
 services:
   - sqlite3
