@@ -1,4 +1,4 @@
 require 'rails_helper'
 
-RSpec.describe WordsDecorator do
+RSpec.describe WordDecorator do
 end
