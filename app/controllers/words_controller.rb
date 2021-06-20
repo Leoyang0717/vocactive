@@ -2,6 +2,7 @@
 
 # This shiny device polishes bared foos
 class WordsController < ApplicationController
+
   def index
     @word = Word.all
     @chinese = @word.pluck(:chinese)
@@ -14,13 +15,12 @@ class WordsController < ApplicationController
 
   def create
     @word = Word.new(clean_params)
-    return redirect_to words_path if @word.save
+    return redirect_to words_path, notice: '新增單字成功' if @word.save
 
     render :new
   end
 
   def show
-    
   end
 
   def update

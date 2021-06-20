@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_01_171117) do
+ActiveRecord::Schema.define(version: 2021_06_17_103224) do
+
+  create_table "collections", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "word_collections", force: :cascade do |t|
+    t.integer "word_id", null: false
+    t.integer "collection_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["collection_id"], name: "index_word_collections_on_collection_id"
+    t.index ["word_id"], name: "index_word_collections_on_word_id"
+  end
 
   create_table "words", force: :cascade do |t|
     t.string "chinese"
@@ -19,4 +35,6 @@ ActiveRecord::Schema.define(version: 2021_06_01_171117) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "word_collections", "collections"
+  add_foreign_key "word_collections", "words"
 end
