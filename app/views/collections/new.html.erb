@@ -1,10 +1,15 @@
 <h1>新增學習集</h1>
-
 <%= form_for @collection do |f| %>
-
-<%= f.label :title %>
-<%= f.text_field :title %>
-<%= f.label :description %>
-<%= f.text_field :description %>
-<%= f.submit '新增' %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <h3>Tasks</h3>
+  <% f.fields_for :words do |word| %>
+    <%= render 'word_fields', :f => word %>
+  <% end %>
+      <div class='links'>
+      <%= link_to_add_association 'add word', f, :words %>
+    </div>
+  <%= f.submit '新增' %>
 <% end %>

@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'awesome_print'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'cocoon'
 gem 'draper', '~> 4.0', '>= 4.0.2'
 
 group :development, :test do

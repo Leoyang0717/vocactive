@@ -1,0 +1,6 @@
+<h1>這裡是<%= @collection.title %>學習集</h1>
+
+<% @words.each do |word| %>
+<%= word.chinese %>
+<%= word.korean %>
+<% end %>
