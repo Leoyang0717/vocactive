@@ -1,0 +1,11 @@
+<h1>collections學習集</h1>
+
+<%= link_to '新增字卡', new_word_path %>
+<%= link_to '新增學習集', new_collection_path %>
+
+<div>
+  <p>你的學習集</p>
+  <% @collections.each do |collection| %>
+  <%= link_to collection.title, collection_path(collection.id) %>
+  <% end%>
+</div>
