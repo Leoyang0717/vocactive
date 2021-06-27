@@ -3,7 +3,7 @@
 # This shiny device polishes bared foos
 class CollectionsController < ApplicationController
   def index
-    @collections = Collection.all
+    @collection = Collection.all.as_json(only: %i[id title description])
   end
 
   def new
