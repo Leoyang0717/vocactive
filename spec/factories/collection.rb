@@ -1,5 +1,3 @@
-association :author, factory: :user
-
 # frozen_string_literal: true
 
 FactoryBot.define do
