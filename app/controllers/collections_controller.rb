@@ -11,7 +11,6 @@ class CollectionsController < ApplicationController
   end
 
   def create
-    byebug
     @collection = Collection.new(clean_params)
     return redirect_to collections_path, notice: '新增學習集成功' if @collection.save
 

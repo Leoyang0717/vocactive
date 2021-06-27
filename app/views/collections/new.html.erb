@@ -1,7 +1,7 @@
 <h1>新增學習集</h1>
 <%= form_for @collection do |f| %>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, required: true %>
   <%= f.label :description %>
   <%= f.text_field :description %>
   <h3>Tasks</h3>
