@@ -1,23 +1,32 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import CollectionGroups from './CollectionGroups';
+import CollectionLists from './CollectionLists';
+import AddCollectionButton from './AddCollectionButton';
+import AddWordsButton from '@/Ｗord/AddWordButton';
 
 const Collection = (props) => {
   const { collections } = props
     return (
-      <React.Fragment>
-        {
-          collections.map(collection => {
-            return(
-              <CollectionGroups
-              key={collection.id}
-              title = {collection.title}
-              description = {collection.description}
-              />
-            );
-          })
-        }
-      </React.Fragment>
+      <div>
+        <div className="flex">
+          <AddCollectionButton />
+          <AddWordsButton />
+        </div>
+        <div className="flex">
+          {
+            collections.map(collection => {
+              return(
+                <CollectionLists
+                key={collection.id}
+                id={collection.id}
+                title = {collection.title}
+                description = {collection.description}
+                />
+              );
+            })
+          }
+        </div>
+      </div>
     )
 };
 
