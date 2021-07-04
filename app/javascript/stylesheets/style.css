@@ -1,0 +1,30 @@
+.navtab::after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid #ffdc62;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.navtabs:hover .navtab::after{
+  visibility: visible;
+}
+
+.active.navtab::after {
+  visibility: visible;
+}
+
+.collection-box {
+  border-width: 4px 0;
+  border-style:solid;
+  border-color: transparent;
+  border-radius: 2px;
+}
+.collection-box:hover {
+  transition-duration: .3s;
+  border-bottom-color: #ccc;
+}

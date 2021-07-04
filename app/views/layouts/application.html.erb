@@ -12,7 +12,26 @@
   </head>
 
   <body>
+    <nav class="navbar bg-secondary border-box">
+      <div class="w-52 text-white flex">
+        <%= link_to collections_path,class: 'navtabs block py-3 mx-1 relative' do %>
+          <span class="navtab">首頁(學習集)</span>
+        <% end %>
+        <%= link_to words_path,class: 'navtabs block py-3 mx-1 relative' do %>
+          <span class="navtab">單字</span>
+        <% end %>
+      </div>
+    </nav>
     <%= flash[:notice] %>
     <%= yield %>
+    <script>
+      document.addEventListener("turbolinks:load",()=>{
+        document.querySelectorAll('.navtab').forEach((e)=>{
+          if(e.parentElement.href == window.location.href) {
+            e.classList.add('active');
+          }
+        })
+      })
+    </script>
   </body>
 </html>

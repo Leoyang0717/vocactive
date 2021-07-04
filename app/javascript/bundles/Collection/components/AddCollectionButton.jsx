@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-
-const AddCollectionButton = (props) => {
+function AddCollectionButton() {
     return (
       <a href="/collections/new" className="block border">
         新增學習集
@@ -9,8 +8,7 @@ const AddCollectionButton = (props) => {
     )
 };
 
-AddCollectionButton.propTypes = {
-  // collections: PropTypes.array.isRequired, // this is passed from the Rails view
-};
+// AddCollectionButton.propTypes = {
+// };
 
 export default AddCollectionButton;

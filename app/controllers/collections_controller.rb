@@ -3,7 +3,7 @@
 # This shiny device polishes bared foos
 class CollectionsController < ApplicationController
   def index
-    @collection = Collection.all.as_json(only: %i[id title description])
+    @collection = Collection.all.as_json(only: %i[id title description], methods: :count_words)
   end
 
   def new

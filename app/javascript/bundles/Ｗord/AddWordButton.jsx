@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-const AddWordsButton = (props) => {
+function AddWordsButton(props) {
     return (
       <a href="/words/new" className="block border">
         新增字卡

@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-const CollectionLists = (props) => {
-  const { id, title, description } = props;
+function CollectionLists(props) {
+  const { id, title, quantity } = props;
     return (
-      <div className="border border-1">
+      <div className="bg-third collection-box">
         <a href={`/collections/${id}`}>
-          <div>
-            <p>學習集名稱：{title}</p>
-            <span>描述: {description}</span>
+          <div className="font-medium">
+            <p className="py-2">{title}</p>
+            <p className="pb-2 text-sm text-gray-500">{quantity}個詞語</p>
           </div>
         </a>
       </div>
@@ -17,7 +17,7 @@ const CollectionLists = (props) => {
 
 CollectionLists.propTypes = {
   title: PropTypes.string, // this is passed from the Rails view
-  description: PropTypes.string, // this is passed from the Rails view
+  quantity: PropTypes.number,
 };
 
 export default CollectionLists;

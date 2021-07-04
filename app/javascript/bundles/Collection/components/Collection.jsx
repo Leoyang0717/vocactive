@@ -4,7 +4,7 @@ import CollectionLists from './CollectionLists';
 import AddCollectionButton from './AddCollectionButton';
 import AddWordsButton from '@/Ｗord/AddWordButton';
 
-const Collection = (props) => {
+function Collection(props) {
   const { collections } = props
     return (
       <div>
@@ -12,15 +12,16 @@ const Collection = (props) => {
           <AddCollectionButton />
           <AddWordsButton />
         </div>
-        <div className="flex">
+        <h3>近期學習集</h3>
+        <div className="grid grid-cols-5 gap-4 mx-4">
           {
             collections.map(collection => {
               return(
                 <CollectionLists
                 key={collection.id}
                 id={collection.id}
-                title = {collection.title}
-                description = {collection.description}
+                title={collection.title}
+                quantity={collection.count_words}
                 />
               );
             })
