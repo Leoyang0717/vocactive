@@ -24,6 +24,7 @@
   border-color: transparent;
   border-radius: 2px;
 }
+
 .collection-box:hover {
   transition-duration: .3s;
   border-bottom-color: #ccc;
